@@ -1,0 +1,19 @@
+.contact-form{
+    width: 60vw;
+    height: 30vw;
+    border-radius: 3vw;
+    padding: 3vw;
+    display: flex;
+    justify-content: left;
+    background-color: rgb(146, 178, 231);
+}
+.cd{
+    weidth:20vw;
+    height: 2vw;
+    padding: 2vw;
+    border-radius: 1vw;
+    margin: 1vw;
+}
+.btn{
+    background-color: rgb(217, 222, 232);
+}

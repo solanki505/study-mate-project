@@ -1,0 +1,48 @@
+
+
+.container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.contest {
+  border-left: 5px solid #3498db;
+  padding: 10px 20px;
+  margin: 15px 0;
+  background: #eef6fd;
+  border-radius: 5px;
+}
+
+.contest h2 {
+  margin: 0 0 5px;
+}
+
+.contest p {
+  margin: 3px 0;
+}
+iframe {
+        max-width: 900px; /* Adjust for responsiveness */
+        width: 90vw;
+        height: 40vw;
+        border-radius: 2vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        align-items: center;;
+      }
+.calendar-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 80vh; /* Adjust as needed */
+        padding: 20px;
+    }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>STUDY MATE</title>
+  <link rel="stylesheet" href="../style/style.css" />
+  <link rel="stylesheet" href="../style/makenote.css" />
+</head>
+<body>
+  <nav>
+  <li class="nav-container">
+    <span class="logo">STUDY MATE</span>
+    <button class="hamburger" id="menu-toggle">&#9776;</button>
+  </li>
+  <ul id="nav-links">
+    <li><a href="../../index.html">Home</a></li>
+    <li><a href="note.html">Class notes</a></li>
+    <li><a href="pyq.html">Semester PYQ</a></li>
+    <li><a href="cp.html">CP Practice</a></li>
+    <li><a href="makenote.html">Make notes</a></li>
+    <li><a href="interview.html">Interview Tips</a></li>
+    <li><a href="doubt.html">Ask Doubts</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="login.html">Login/SignUp</a></li>
+  </ul>
+</nav>
+<div class="container">
+    <h1 class="slider-subtitle slider-reveal"></h1>
+<div class="container">
+    <h1 class="slider-subtitle slider-reveal">Make a Note & Summarize</h1>
+    <textarea id="noteInput" rows="8" cols="60" placeholder="Write your note here..."></textarea>
+    <br>
+    <button class="btn" onclick="summarizeNote()">Summarize</button>
+    <h3>Summary:</h3>
+    <div id="summaryBox" style="border:1px solid #ccc; padding:10px; min-height:40px;"></div>
+</div>
+<script>
+function summarizeNote() {
+    const text = document.getElementById('noteInput').value.trim();
+    if (!text) {
+        document.getElementById('summaryBox').innerText = "Please enter some text to summarize.";
+        return;
+    }
+    // Try to get the first 2 sentences
+    const sentences = text.match(/[^\.!\?]+[\.!\?]+/g);
+    let summary = '';
+    if (sentences && sentences.length > 1) {
+        summary = sentences.slice(0, 2).join(' ').trim();
+    } else {
+        const words = text.split(/\s+/);
+        summary = words.slice(0, 40).join(' ') + (words.length > 40 ? '...' : '');
+    }
+    document.getElementById('summaryBox').innerText = summary;
+}
+</script>
+        </div>
+<body>
+
+  <footer>
+    <hr>
+    <br>
+    Created by <strong>Solanki Sarkar</strong> &nbsp;|&nbsp;
+    <a href="https://github.com/solanki505" target="_blank">GitHub: solanki505</a>
+  </footer>
+
+  <script src="../../index.js"></script>
+</body>
+</html>
