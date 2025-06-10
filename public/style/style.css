@@ -229,3 +229,6 @@ footer a:hover {
 button{
   background-color:  rgb(136, 157, 224);
 }
+.ytp-cued-thumbnail-overlay-image{
+  margin-top: 10vw;
+}
