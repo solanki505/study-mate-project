@@ -9,41 +9,42 @@
 </head>
 <body>
   <nav>
-  <li class="nav-container">
-    <span class="logo">STUDY MATE</span>
-    <button class="hamburger" id="menu-toggle">&#9776;</button>
-  </li>
-  <ul id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="public/html/note.html">Class notes</a></li>
-    <li><a href="public/html/pyq.html">Semester PYQ</a></li>
-    <li><a href="public/html/cp.html">CP Practice</a></li>
-    <li><a href="public/html/makenote.html">Make notes</a></li>
-    <li><a href="public/html/interview.html">Interview Tips</a></li>
-    <li><a href="public/html/doubt.html">Ask Doubts</a></li>
-    <li><a href="public/html/contact.html">Contact Us</a></li>
-    <li><a href="public/html/login.html">Login/SignUp</a></li>
-  </ul>
-</nav>
-
-  <div style="display: flex;">
-  <div class="container">
-    <section class="hero item" style="height: 32vw; justify-content: center;margin-top: 5vw; display: flex; margin-bottom: 4vw;">
-      <div style="justify-content: left;"><h1 class="slider-subtitle slider-reveal">STUDY MATE<h4 class="slider-subtitle slider-reveal" style="font-family: cursive; width: 60%;display: flex; ">
-        Your one-stop academic and career companion 
-      </h4></h1>
-      <p class="slider-subtitle slider-reveal" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:medium; padding-bottom: 2vw;">
-      Access semester-wise and topic-wise notes, class PDFs, and previous year question papers — all in one place.<br>
-      But we don’t stop there. Whether you’re preparing for competitive programming, interviews, or looking for contest alerts and job/internship openings, STUDY MATE has you covered along with AI text Summarizer and white board.
-    </p>
-    <button class="btn"><a href="public/html/login.html" style="color: aliceblue ">Login/SignUp</a></a></button>
-  </div>
-    <div>
-    <img class="slider-subtitle slider-reveal" src="uploads/girl-with-flying-books-with-magic-glow-sparkles-vector-cartoon-fantasy-illustration-happy-chi.png" style="display: flex;height: 30vw; justify-content: right;margin-top: 5vw; position: relative; bottom: 10vw;left :5vw">
+    <div class="nav-container">
+      <span  class="hamburger">STUDY MATE</span>
+      <button class="hamburger" id="menu-toggle">&#9776;</button>
     </div>
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="public/html/note.html">Class notes</a></li>
+      <li><a href="public/html/pyq.html">Semester PYQ</a></li>
+      <li><a href="public/html/cp.html">CP Practice</a></li>
+      <li><a href="public/html/makenote.html">Make notes</a></li>
+      <li><a href="public/html/interview.html">Interview Tips</a></li>
+      <li><a href="public/html/doubt.html">Ask Doubts</a></li>
+      <li><a href="public/html/contact.html">Contact Us</a></li>
+      <li><a href="public/html/login.html">Login/SignUp</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h1 class="slider-subtitle slider-reveal">STUDY MATE</h1>
+        <h4 class="slider-subtitle slider-reveal">
+          Your one-stop academic and career companion
+        </h4>
+        <p class="slider-subtitle slider-reveal">
+          Access semester-wise and topic-wise notes, class PDFs, and previous year question papers — all in one place.<br>
+          But we don’t stop there. Whether you’re preparing for competitive programming, interviews, or looking for contest alerts and job/internship openings, STUDY MATE has you covered along with AI text Summarizer and white board.
+        </p>
+        <button class="btn"><a href="public/html/login.html">Login/SignUp</a></button>
+      </div>
+      <div class="hero-image">
+        <img src="uploads/girl-with-flying-books-with-magic-glow-sparkles-vector-cartoon-fantasy-illustration-happy-chi.png" alt="Illustration" />
+      </div>
     </section>
 
-    <div class="item video-container">
+    <div class="video-container">
       <iframe 
         src="https://www.youtube.com/embed/pvze9BPX36U"
         title="YouTube video player"
@@ -52,7 +53,7 @@
       </iframe>
     </div>
   </div>
-</div>
+
   <footer>
     <hr>
     <br>
@@ -60,6 +61,13 @@
     <a href="https://github.com/solanki505" target="_blank">GitHub: solanki505</a>
   </footer>
 
+  <script>
+    // Hamburger menu toggle
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      document.getElementById("nav-links").classList.toggle("show");
+    });
+  </script>
   <script src="index.js"></script>
 </body>
 </html>
+
