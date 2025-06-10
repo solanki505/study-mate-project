@@ -229,13 +229,6 @@ footer a:hover {
 button{
   background-color:  rgb(136, 157, 224);
 }
-/* Default layout (desktop) */
-.container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
 /* Responsive layout (mobile) */
 @media (max-width: 768px) {
   .container {
