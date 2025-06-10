@@ -1,4 +1,4 @@
-
+/* Reset and layout */
 * {
   margin: 0;
   padding: 0;
@@ -6,28 +6,51 @@
 }
 
 body {
-  background: linear-gradient(90deg, rgb(184, 186, 186) 7%, rgb(221, 238, 238) 50%, rgb(146, 178, 231) 100%);
+  background: linear-gradient(90deg, #b8baba 7%, #ddeeee 50%, #92b2e7 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Navbar */
 nav {
-  background-color: rgb(146, 178, 231);
+  background-color: #92b2e7;
   padding: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: cursive;
+  font-size: 1.8rem;
+  color: #23282c;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #23282c;
+}
+
+#nav-links {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
-nav ul li a {
+#nav-links li a {
   text-decoration: none;
   color: #333;
   font-size: 1rem;
@@ -36,7 +59,7 @@ nav ul li a {
   transition: color 0.3s ease;
 }
 
-nav ul li a::after {
+#nav-links li a::after {
   content: '';
   position: absolute;
   width: 0;
@@ -47,47 +70,104 @@ nav ul li a::after {
   transition: width 0.3s ease;
 }
 
-nav ul li a:hover {
+#nav-links li a:hover {
   color: #4169e1;
 }
 
-nav ul li a:hover::after {
+#nav-links li a:hover::after {
   width: 100%;
 }
 
+/* Main Container */
 .container {
+  flex: 1;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
   gap: 2rem;
-  flex: 1;
 }
 
+/* Hero Section */
 .hero {
-  text-align: left;
-  max-width: 800px;
-  color: rgb(136, 157, 224);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-left: 15vw;
 }
 
-.hero h1 {
+.hero-text {
+  flex: 1;
+  color: #889de0;
+  text-align: left;
+}
+
+.hero-text h1 {
   font-size: 2.5rem;
-  color: rgb(109, 126, 183);
+  color: #6d7eb7;
   font-family: cursive;
 }
 
-.hero p {
-  padding-top: 2vw;
-  font-size: 1.2rem;
-  color: #323237;
-  line-height: 1.5;
+.hero-text h4 {
+  font-family: cursive;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  color: #444;
+  width: 100%;
 }
 
+.hero-text p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #323237;
+  line-height: 1.5;
+  justify-content: center;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* Button */
+.btn {
+  margin-top: 1.5rem;
+  background-color: #889de0;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.btn a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #6d7eb7;
+}
+
+/* Video */
 .video-container {
-  position: relative;
   width: 100%;
   max-width: 800px;
   aspect-ratio: 16 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .video-container iframe {
@@ -96,15 +176,17 @@ nav ul li a:hover::after {
   border: none;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+  background: transparent;
   margin-top: auto;
 }
 
 footer a {
-  color: rgb(65, 105, 225);
+  color: #4169e1;
   text-decoration: none;
 }
 
@@ -112,123 +194,29 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Media Queries */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
-}
-/* Add inside style.css */
-
-/* Navbar container and hamburger button */
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Hide hamburger by default */
-.hamburger {
-  display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.logo {
-  display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: cursive;
-}
-/* Navigation list default styles */
-#nav-links {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-/* Mobile view */
+/* Responsive */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-    color: #23282c;
+  .hero {
+    flex-direction: column;
+    text-align: center;
   }
-  .logo {
-    display: block;
-    color: #23282c;
+
+  .hero-text {
+    text-align: center;
   }
+
   #nav-links {
     display: none;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    margin-top: 0.5rem;
   }
 
   #nav-links.show {
     display: flex;
   }
+
+  .hamburger {
+    display: block;
+  }
 }
-.slider-bg {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-.slider-reveal {
-            animation: fadeInUp 1.5s ease-in-out;
-        }
-@keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translate3d(0, 40px, 0);
-            }
-            to {
-                opacity: 1;
-                transform: none;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .slider-title {
-                font-size: 1.5rem;
-            }
-            .slider-subtitle,
-            .slider-text {
-                font-size: 1rem;
-            }
-            .carousel-caption {
-                padding-bottom: 3rem;
-            }
-        }
-        
-.btn{
-  color: rgb(8, 9, 10);
-  height: 3vw;
-  border: none;
-  width: 10vw;
-  padding: auto;
-  border-radius: 10vw;
-}
-button{
-  background-color:  rgb(136, 157, 224);
-}
-.ytp-cued-thumbnail-overlay-image{
-  margin-top: 10vw;
-}
+
